@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  user-select: none;
+}
+
+body {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 10px;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: auto;
+}
+
+.main-container {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* ==========================================
+   🟢 KALIWA: KEYBOARD STYLING
+========================================== */
+.keyboard-section {
+  background-color: #2c5f2d; /* DARK GREEN - GAYA SA LARAWAN MO */
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #1b4332;
+}
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.row {
+  display: flex;
+  gap: 4px;
+}
+
+.key {
+  background-color: #40916c; /* LIGHTER GREEN */
+  color: #ffffff;
+  border: 1px solid #1b4332;
+  border-radius: 4px;
+  height: 42px;
+  min-width: 38px;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.key.wide { min-width: 60px; }
+.key.wide2 { min-width: 85px; }
+
+.key:active {
+  transform: scale(0.94);
+  background-color: #52b788 !important;
+}
+
+/* ==========================================
+   ⚪ SPACE / TRACKPAD - ANG PINAKA IMPORTANTE
+========================================== */
+#touch-cursor {
+  background-color: #ffffff !important; /* PUTI TALAGA GAYA SA GUSTO MO */
+  color: #000000 !important;
+  border: 2px solid #333333;
+  border-radius: 4px;
+  height: 42px;
+  min-width: 210px;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#touch-cursor:active {
+  background-color: #e0e0e0 !important;
+}
+
+/* ==========================================
+   🎛️ KANAN: CONTROL PANEL
+========================================== */
+.control-side {
+  background-color: #222222;
+  border: 2px solid #444444;
+  border-radius: 8px;
+  padding: 12px;
+  width: 150px;
+  text-align: center;
+}
+
+h3 {
+  color: #40916c;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+#connect-btn {
+  width: 100%;
+  padding: 8px;
+  background: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-bottom: 4px;
+  cursor: pointer;
+}
+
+#status-text {
+  font-size: 11px;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+hr {
+  border: 1px solid #444;
+  margin: 10px 0;
+}
+
+.btn-row {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 6px;
+}
+
+.btn-blue { background: #2196F3; }
+.btn-red { background: #d32f2f; }
+.btn-cyan { background: #0097a7; }
+.btn-green { background: #388e3c; }
+.btn-purple { background: #7b1fa2; }
+.btn-yellow { background: #fbc02d; color: #000; }
+.btn-orange { background: #ef6c00; }
+
+.btn-blue, .btn-red, .btn-cyan, .btn-green, .btn-purple, .btn-yellow, .btn-orange {
+  flex: 1;
+  padding: 7px 2px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+/* NAVIGATION BUTTONS */
+.nav-buttons {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.btn-dir {
+  width: 45px;
+  height: 38px;
+  background: #555;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.mid-btns {
+  display: flex;
+  gap: 4px;
+}
+
+.btn-ok {
+  width: 45px;
+  height: 38px;
+  background: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* PRESS EFFECT */
+.btn-blue:active, .btn-red:active, .btn-cyan:active, .btn-green:active, 
+.btn-purple:active, .btn-yellow:active, .btn-orange:active, .btn-dir:active, .btn-ok:active {
+  transform: scale(0.92);
+  opacity: 0.85;
+}

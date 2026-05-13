@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Universal TV Controller - Bluetooth</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="main-container">
+
+    <!-- 🟢 KALIWA: KEYBOARD AREA -->
+    <div class="keyboard-section">
+      <div class="keyboard">
+
+        <!-- LINYA 1 -->
+        <div class="row">
+          <button class="key" onclick="sendKey(1)">Esc</button>
+          <button class="key" onclick="sendKey(59)">F1</button>
+          <button class="key" onclick="sendKey(60)">F2</button>
+          <button class="key" onclick="sendKey(61)">F3</button>
+          <button class="key" onclick="sendKey(62)">F4</button>
+          <button class="key" onclick="sendKey(63)">F5</button>
+          <button class="key" onclick="sendKey(64)">F6</button>
+          <button class="key" onclick="sendKey(65)">F7</button>
+          <button class="key" onclick="sendKey(66)">F8</button>
+          <button class="key" onclick="sendKey(67)">F9</button>
+          <button class="key" onclick="sendKey(68)">F10</button>
+          <button class="key" onclick="sendKey(69)">F11</button>
+          <button class="key" onclick="sendKey(70)">F12</button>
+        </div>
+
+        <!-- LINYA 2 -->
+        <div class="row">
+          <button class="key" onclick="sendKey(41)">`~</button>
+          <button class="key" onclick="sendKey(30)">1!</button>
+          <button class="key" onclick="sendKey(31)">2@</button>
+          <button class="key" onclick="sendKey(32)">3#</button>
+          <button class="key" onclick="sendKey(33)">4$</button>
+          <button class="key" onclick="sendKey(34)">5%</button>
+          <button class="key" onclick="sendKey(35)">6^</button>
+          <button class="key" onclick="sendKey(36)">7&</button>
+          <button class="key" onclick="sendKey(37)">8*</button>
+          <button class="key" onclick="sendKey(38)">9(</button>
+          <button class="key" onclick="sendKey(39)">0)</button>
+          <button class="key" onclick="sendKey(45)">-_</button>
+          <button class="key" onclick="sendKey(46)">=+</button>
+          <button class="key wide" onclick="sendKey(42)">⌫</button>
+        </div>
+
+        <!-- LINYA 3 -->
+        <div class="row">
+          <button class="key wide" onclick="sendKey(43)">Tab</button>
+          <button class="key" onclick="sendKey(16)">Q</button>
+          <button class="key" onclick="sendKey(17)">W</button>
+          <button class="key" onclick="sendKey(18)">E</button>
+          <button class="key" onclick="sendKey(19)">R</button>
+          <button class="key" onclick="sendKey(20)">T</button>
+          <button class="key" onclick="sendKey(21)">Y</button>
+          <button class="key" onclick="sendKey(22)">U</button>
+          <button class="key" onclick="sendKey(23)">I</button>
+          <button class="key" onclick="sendKey(24)">O</button>
+          <button class="key" onclick="sendKey(25)">P</button>
+          <button class="key" onclick="sendKey(47)">[{</button>
+          <button class="key" onclick="sendKey(48)">]}</button>
+          <button class="key" onclick="sendKey(49)">|</button>
+        </div>
+
+        <!-- LINYA 4 -->
+        <div class="row">
+          <button class="key wide" onclick="sendKey(57)">Caps</button>
+          <button class="key" onclick="sendKey(4)">A</button>
+          <button class="key" onclick="sendKey(5)">S</button>
+          <button class="key" onclick="sendKey(6)">D</button>
+          <button class="key" onclick="sendKey(7)">F</button>
+          <button class="key" onclick="sendKey(8)">G</button>
+          <button class="key" onclick="sendKey(9)">H</button>
+          <button class="key" onclick="sendKey(10)">J</button>
+          <button class="key" onclick="sendKey(11)">K</button>
+          <button class="key" onclick="sendKey(12)">L</button>
+          <button class="key" onclick="sendKey(51)">;:</button>
+          <button class="key" onclick="sendKey(52)">'"</button>
+          <button class="key wide2" onclick="sendKey(40)">⏎</button>
+        </div>
+
+                <!-- LINYA 5 -->
+        <div class="row">
+          <button class="key wide" onclick="sendKey(225)">⇧</button>
+          <button class="key" onclick="sendKey(26)">Z</button>
+          <button class="key" onclick="sendKey(27)">X</button>
+          <button class="key" onclick="sendKey(28)">C</button>
+          <button class="key" onclick="sendKey(29)">V</button>
+          <button class="key" onclick="sendKey(30)">B</button>
+          <button class="key" onclick="sendKey(31)">N</button>
+          <button class="key" onclick="sendKey(32)">M</button>
+          <button class="key" onclick="sendKey(54)">,</button>".</button>
+          <button class="key" onclick="sendKey(55)">.</button>
+          <button class="key" onclick="sendKey(56)">/?</button>
+          <button class="key wide" onclick="sendKey(229)">⇧</button>
+        </div>
+
+        <!-- ⚪ LINYA 6: SPACE / TRACKPAD - DITO GAGALAW ANG CURSOR -->
+        <div class="row">
+          <button class="key wide" onclick="sendKey(224)">Ctrl</button>
+          <button class="key wide" onclick="sendKey(231)">⊞</button>
+          <button class="key wide" onclick="sendKey(226)">Alt</button>
+          
+          <!-- PUTI ITO, GAYA SA GUSTO MO -->
+          <div id="touch-cursor" ontouchstart="startDrag(event)" ontouchmove="drag(event)" ontouchend="endDrag()">
+            🖱️ GALAWIN DITO
+          </div>
+
+          <button class="key wide" onclick="sendKey(230)">AltGr</button>
+          <button class="key wide" onclick="sendKey(101)">Menu</button>
+          <button class="key wide" onclick="sendKey(228)">Ctrl</button>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- 🎛️ KANAN: TV CONTROLS (LAHAT NASA GILID) -->
+    <div class="control-side">
+      <h3>📺 TV REMOTE</h3>
+      
+      <button id="connect-btn" class="btn-blue">🔗 IKONEKTA</button>
+      <p id="status-text">Hindi nakakonekta</p>
+      <hr>
+
+      <div class="btn-row">
+        <button class="btn-red" onclick="sendMedia(120)">🔌 POWER</button>
+        <button class="btn-cyan" onclick="sendMedia(139)">⚙️ SETTINGS</button>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn-green" onclick="sendMedia(234)">🔊+</button>
+        <button class="btn-green" onclick="sendMedia(233)">🔉-</button>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn-purple" onclick="sendMedia(179)">📶+</button>
+        <button class="btn-purple" onclick="sendMedia(178)">📶-</button>
+      </div>
+
+      <!-- ARROW KEYS -->
+      <div class="nav-buttons">
+        <button class="btn-dir" onclick="sendKey(82)">↑</button>
+        <div class="mid-btns">
+          <button class="btn-dir" onclick="sendKey(81)">←</button>
+          <button class="btn-ok" onclick="sendKey(96)">✅ OK</button>
+          <button class="btn-dir" onclick="sendKey(83)">→</button>
+        </div>
+        <button class="btn-dir" onclick="sendKey(84)">↓</button>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn-yellow" onclick="sendMedia(172)">🏠 HOME</button>
+        <button class="btn-yellow" onclick="sendMedia(174)">⬅️ BACK</button>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn-orange" onclick="sendMedia(181)">📺 INPUT</button>
+        <button class="btn-orange" onclick="sendMedia(166)">📖 GUIDE</button>
+      </div>
+
+    </div>
+
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
